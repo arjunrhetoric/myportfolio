@@ -1,0 +1,23 @@
+{
+  "name": "arjunrhetoric",
+  "version": "1.0.0",
+  "description": "Arjun Singh's personal business card in your terminal",
+  "bin": {
+    "arjunrhetoric": "./card.js"
+  },
+  "files": [
+    "card.js"
+  ],
+  "keywords": [
+    "business-card",
+    "npx-card",
+    "portfolio"
+  ],
+  "author": "Arjun Singh <arjunrhetoric@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arjunrhetoric"
+  },
+  "preferGlobal": true
+}
