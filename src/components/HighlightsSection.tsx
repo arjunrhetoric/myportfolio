@@ -8,6 +8,7 @@ export interface Highlight {
   title: string;
   mediaType: "image" | "video";
   image?: string;
+  video?: string;
   videoUrl?: string;
   videoFile?: {
     asset: {
@@ -33,8 +34,6 @@ export default function HighlightsSection({
     setHighlights(initialHighlights);
   }, [initialHighlights]);
 
-  if (highlights.length === 0) return null;
-
   const count = highlights.length;
   const maxIndex = Math.max(0, count - 2); // 2 cards visible, slide 1 at a time
 
@@ -59,6 +58,8 @@ export default function HighlightsSection({
 
     return () => clearInterval(timer);
   }, [nextSlide, count]);
+
+  if (highlights.length === 0) return null;
 
   return (
     <section className="highlights-section">
@@ -147,7 +148,7 @@ export default function HighlightsSection({
                         }}
                       />
                     )}
-                    {!project.image && !project.videoUrl && !project.videoFile?.asset?.url && (
+                    {!project.image && !project.video && !project.videoUrl && !project.videoFile?.asset?.url && (
                       <div
                         style={{
                           width: "100%",
@@ -171,6 +172,24 @@ export default function HighlightsSection({
                           {project.title}
                         </span>
                       </div>
+                    )}
+                    {project.mediaType === "video" && project.video && (
+                      <video
+                        src={project.video}
+                        poster={typeof project.image === "string" ? project.image : undefined}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                        aria-label={project.title}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          borderRadius: "inherit",
+                        }}
+                      />
                     )}
                     {project.mediaType === "video" && project.videoFile?.asset?.url && (
                       <video

@@ -205,6 +205,7 @@ export type Highlight = {
   title: string;
   mediaType: "image" | "video";
   image?: string;
+  video?: string;
   link?: string;
 };
 
@@ -212,22 +213,25 @@ export const highlights: Highlight[] = [
   {
     _id: "innoverse",
     title: "innoverse",
-    mediaType: "image",
+    mediaType: "video",
     image: "/innoverse.png",
+    video: "/brag-videos/innoverse-brag.mp4",
     link: "https://buildwithinnoverse.vercel.app/",
   },
   {
     _id: "formflow",
     title: "formflow",
-    mediaType: "image",
+    mediaType: "video",
     image: "/formflow.png",
+    video: "/brag-videos/formflow-brag.mp4",
     link: "https://formflow-build.vercel.app/",
   },
   {
     _id: "infrachat",
     title: "infrachat",
-    mediaType: "image",
+    mediaType: "video",
     image: "/infrachat.png",
+    video: "/brag-videos/infrachat-brag.mp4",
     link: "https://infra-chat-build.vercel.app/",
   },
   {

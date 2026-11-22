@@ -677,7 +677,7 @@ body:has(.gallery-intro-page) .bottom-vignette {
 
 .project-card {
   width: 100%;
-  aspect-ratio: 220 / 160;
+  aspect-ratio: 16 / 9;
   background-color: #dfdfdf;
   border-radius: 16px;
   flex-shrink: 0;
