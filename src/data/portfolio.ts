@@ -131,6 +131,7 @@ export type DevProject = {
   description: string;
   link: string;
   imageUrl?: string;
+  video?: string;
 };
 
 export const devProjects: DevProject[] = [
@@ -141,6 +142,7 @@ export const devProjects: DevProject[] = [
       "Full-stack collaboration platform connecting startups and students through real-world problem statements, proposal submissions, and project tracking. Role-based auth, GitHub integration, and real-time notifications.",
     link: "https://buildwithinnoverse.vercel.app/",
     imageUrl: "/innoverse.png",
+    video: "/brag-videos/innoverse-brag.mp4",
   },
   {
     id: "formflow",
@@ -149,6 +151,7 @@ export const devProjects: DevProject[] = [
       "No-code form builder with drag-and-drop components, live previews, real-time collaborative editing, conditional logic, version history, and response management with data export.",
     link: "https://formflow-build.vercel.app/",
     imageUrl: "/formflow.png",
+    video: "/brag-videos/formflow-brag.mp4",
   },
   {
     id: "infrachat",
@@ -157,6 +160,7 @@ export const devProjects: DevProject[] = [
       "Realtime team messaging platform with authority baked in — every privileged action runs as a slash command (/kick, /mute, /ban), permission-checked server-side and sealed into an append-only audit trail. Next.js monorepo with Pusher realtime, Postgres + Prisma, and Auth.js.",
     link: "https://infra-chat-build.vercel.app/",
     imageUrl: "/infrachat.png",
+    video: "/brag-videos/infrachat-brag.mp4",
   },
   {
     id: "thesubconscious",

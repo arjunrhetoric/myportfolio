@@ -1059,7 +1059,7 @@ body:has(.gallery-intro-page) .bottom-vignette {
 
 .project-list-image-placeholder {
   width: 440px;
-  height: 260px;
+  aspect-ratio: 16 / 9;
   background-color: #dfdfdf;
   border-radius: 12px;
   flex-shrink: 0;

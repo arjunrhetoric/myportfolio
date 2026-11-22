@@ -7,6 +7,7 @@ interface Project {
     title: string;
     description?: string;
     imageUrl?: string;
+    video?: string;
     link?: string;
 }
 
@@ -42,7 +43,19 @@ export default function ProjectPageTemplate({ title, subtitle, projects, childre
                         const cardContent = (
                             <div className="project-list-card" style={project.link ? { cursor: "pointer" } : {}}>
                                 <div className="project-list-image-placeholder">
-                                    {project.imageUrl && (
+                                    {project.video ? (
+                                        <video
+                                            src={project.video}
+                                            poster={project.imageUrl}
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
+                                            preload="metadata"
+                                            aria-label={project.title}
+                                            style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+                                        />
+                                    ) : project.imageUrl && (
                                         <img src={project.imageUrl} alt={project.title} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
                                     )}
                                 </div>
