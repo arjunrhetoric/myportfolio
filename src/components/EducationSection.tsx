@@ -8,11 +8,12 @@ interface Education {
     degree: string;
     date: string;
     cgpa?: string;
+    percentage?: string;
     logo?: any;
     link?: string;
 }
 
-function EducationItem({ institution, degree, date, cgpa, logo, link }: any) {
+function EducationItem({ institution, degree, date, cgpa, percentage, logo, link }: any) {
     const imageStyle = {
         width: "100%",
         height: "100%",
@@ -39,6 +40,7 @@ function EducationItem({ institution, degree, date, cgpa, logo, link }: any) {
                         <h3 className="company-name">{institution}</h3>
                         <p className="role-name">{degree}</p>
                         {cgpa && <p className="role-name" style={{ marginTop: "2px", color: "var(--text-secondary)" }}>CGPA: {cgpa}</p>}
+                        {percentage && <p className="role-name" style={{ marginTop: "2px", color: "var(--text-secondary)" }}>Percentage: {percentage}%</p>}
                     </div>
                     <div className="experience-date">{date}</div>
                 </div>

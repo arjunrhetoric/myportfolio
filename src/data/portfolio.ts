@@ -60,6 +60,7 @@ export type Education = {
   degree: string;
   date: string;
   cgpa?: string;
+  percentage?: string;
   logo?: string;
   link?: string;
 };
@@ -72,6 +73,15 @@ export const education: Education[] = [
     date: "Aug 2025 - Present",
     cgpa: "9.41 / 10",
     logo: "/tcet-logo.webp",
+  },
+
+  {
+    _id: "vp-dip",
+    institution: "Vidyalankar Polytechnic",
+    degree: "Diploma in Information Technology",
+    date: "Aug 2022 - Jun 2025",
+    percentage: "90.69",
+    logo: "/vp_logo.webp",
   },
 ];
 
